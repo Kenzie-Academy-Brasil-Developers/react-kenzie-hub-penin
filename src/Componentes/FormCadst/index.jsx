@@ -2,10 +2,10 @@ import { useForm } from "react-hook-form";
 import { Input } from "../input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerFormSchema } from "./registerForm.schema";
-import { api } from "../../services/api"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import style from "./style.module.scss"
+
+import { useContextIm } from "../../hooks/useContext";
 
 
 
@@ -14,34 +14,14 @@ export const FormCadst = () => {
         resolver: zodResolver(registerFormSchema),
     });
 
-    const navigate = useNavigate();
 
+    const {userRegister } = useContextIm();
     const [loading, setLoading] = useState(false);
 
-    const userRegister = async (pay) => {
-
-
-        try {
-            setLoading(true)
-            await api.post("/users", pay);
-            navigate("/");
-            alert("Cadastro realizado com sucesso")
-
-
-        } catch (error) {
-
-            if (error.response?.data.message === "Email already exists") {
-                alert("Usuario já cadastrado");
-            }
-        } finally {
-            setLoading(false)
-        }
-
-    };
 
     const submit = (pay) => {
 
-        userRegister(pay);s
+        userRegister(pay, setLoading);
     };
 
     return (
@@ -52,7 +32,7 @@ export const FormCadst = () => {
                 <p className="Headline">Rapido e grátis, vamos nessa</p>
             </div>
 
-            <Input 
+            <Input
                 label="Nome"
                 type="text"
                 id="name"
