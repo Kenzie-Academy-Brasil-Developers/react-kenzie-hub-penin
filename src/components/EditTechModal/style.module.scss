@@ -1,0 +1,128 @@
+.modalOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    gap: 1.375rem;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+
+    .modalBox {
+        position: relative;
+        width: 23.0625rem;
+        height: 21.375rem;
+        overflow-y: auto;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.375rem;
+        border-radius: 0.25rem;
+        background: var(--color-grey-3);
+        box-shadow: 0rem 0.25rem 2.5rem -0.625rem rgba(0, 0, 0, 0.25);
+    }
+}
+
+.header {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+    background: var(--grey-2, #343B41);
+}
+
+.modalHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+        color: var(--color-grey-0);
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem;
+    }
+
+    button {
+        color: var(--color-grey-1);
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.625rem;
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    padding: 1rem;
+}
+
+.button {
+    color: var(--color-white);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6496rem;
+
+    display: inline-flex;
+    height: 3rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    border: 0.0761rem solid var(--color-primary);
+    background: var(--color-primary);
+    border-radius: 0.25rem;
+    transition: 0.3s;
+
+    &:hover {
+        border: 0.0761rem solid var(--color-primary-focus);
+        background: var(--color-primary-focus);
+    }
+
+    &:focus {
+        border: 0.0761rem solid var(--color-primary-focus);
+        background: var(--color-primary-focus);
+    }
+}
+
+@media (max-width: 43.75rem) {
+    .modalOverlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        inset: 0;
+        gap: 1.375rem;
+        margin: 0 auto;
+        padding: 0;
+        width: auto;
+        max-width: 80%;
+        min-height: 100vh;
+        background-color: transparent;
+
+        .modalBox {
+            position: relative;
+            width: 23.0625rem;
+            height: 21.375rem;
+            overflow-y: auto;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.375rem;
+            border-radius: 0.25rem;
+            background: var(--color-grey-3);
+            box-shadow: 0rem 0.25rem 2.5rem -0.625rem rgba(0, 0, 0, 0.25);
+        }
+    }
+}

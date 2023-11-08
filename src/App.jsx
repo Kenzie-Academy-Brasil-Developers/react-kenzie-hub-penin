@@ -1,15 +1,17 @@
-import { Loading } from "./Componentes/Loanding";
-import { useContextIm } from "./hooks/useContext";
-import { RoutesMain } from "./routes";
-import "./styles/index.scss";
+import { TechProvider } from "./providers/TechContext"
+import { RoutesMain } from "./routes/RoutesMain"
+import "./styles/index.scss"
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
-  const {loading} = useContextIm();
-
   return (
-    <>
-      {loading ? <Loading>Carregando...</Loading> : <RoutesMain />}
-    </>
+    <div className="App">
+      <TechProvider>
+        <RoutesMain />
+        <ToastContainer autoClose={2000} theme="dark" />
+      </TechProvider>
+    </div>
   )
 }
 

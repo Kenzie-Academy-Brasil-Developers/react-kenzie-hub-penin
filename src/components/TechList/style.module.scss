@@ -1,0 +1,33 @@
+.techList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    max-width: 60%;
+    margin: 0 auto;
+    height: auto;
+    gap: 1rem;
+    padding: 1.5625rem;
+    border-radius: 0.25rem;
+    background: var(--color-grey-3);
+    flex-shrink: 0;
+}
+
+@media (max-width: 43.75rem){
+    .techList {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        max-width: 80%;
+        margin: 1.25rem auto;
+        height: auto;
+        gap: 1rem;
+        padding: 1.5625rem;
+        border-radius: 0.25rem;
+        background: var(--color-grey-3);
+        flex-shrink: 0;
+    }
+}

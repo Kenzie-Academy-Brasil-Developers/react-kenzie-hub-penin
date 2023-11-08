@@ -1,0 +1,50 @@
+%title {
+    font-weight: bold;
+    color: var(--color-grey-0);
+}
+
+.title1 {
+    @extend %title;
+    font-size: 1.125rem;
+
+    &.alignCenter {
+        text-align: center;
+    }
+
+    &.nowrap {
+        white-space: nowrap;
+    }
+}
+
+.title2 {
+    @extend %title;
+    font-size: 1rem;
+}
+
+
+%text {
+    font-weight: 700;
+    color: var(--color-grey-1);
+}
+
+.text1 {
+    @extend %text;
+    color: var(--color-grey-1);
+    font-size: 0.75rem;
+
+    &.alignCenter {
+        text-align: center;
+    }
+}
+
+.paragraph {
+    @extend %text;
+    font-size: 1rem;
+}
+
+.headlineBold {
+    font-weight: bold;
+    color: var(--color-grey-1);
+    font-size: 0.75rem;
+    text-align: center;
+}

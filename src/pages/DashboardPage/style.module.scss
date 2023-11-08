@@ -1,0 +1,137 @@
+header {
+    width: auto;
+    background: var(--color-grey-4);
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    z-index: 100;
+}
+
+.header {
+    display: flex;
+    width: auto;
+    max-width: 60%;
+    margin: 1.875rem auto;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+main {
+    position: static;
+    top: 0;
+    z-index: 0;
+}
+
+.btn {
+    display: inline-flex;
+    height: 2.1875rem;
+    padding: 0rem 1.0152rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6345rem;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--color-grey-3);
+    color: var(--color-grey-0);
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.7766rem;
+}
+
+.separator {
+    width: auto;
+    height: 0.0625rem;
+    flex-shrink: 0;
+    background: var(--color-grey-3);
+    border: none;
+}
+
+.info {
+    display: flex;
+    width: auto;
+    max-width: 60%;
+    margin: 0 auto;
+    height: 7.375rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.info2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    max-width: 60%;
+    margin: 1.25rem auto;
+    height: auto;
+    gap: 1.25rem;
+    flex-shrink: 0;
+}
+
+.buttonPlus {
+    border: none;
+    color: var(--color-white);
+    width: 2.0303rem;
+    height: 2rem;
+    flex-shrink: 0;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5228rem;
+    background-color: var(--color-grey-3);
+    border-radius: 0.25rem;
+}
+
+.title {
+    width: auto;
+    max-width: 60%;
+    margin: 0 auto;
+    font-weight: bold;
+    color: var(--color-grey-0);
+    font-size: 1.125rem;
+    text-align: start;
+}
+
+@media (max-width: 43.75rem) {
+    .header {
+        display: flex;
+        width: auto;
+        max-width: 80%;
+        margin: 1.875rem auto;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    .info {
+        width: auto;
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        margin: 1.875rem auto;
+        gap: 1rem;
+        flex-shrink: 0;
+    }
+
+    .info2 {
+        width: auto;
+        max-width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
+        margin: 1.25rem auto;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,33 @@
+.input {
+    color: var(--color-grey-1);
+    font-size: 1.0152rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6496rem;
+
+    display: flex;
+    width: auto;
+    height: 3rem;
+    padding: 0rem 1.0152rem;
+    align-items: center;
+    gap: 0.6345rem;
+    flex-shrink: 0;
+
+    border-radius: 0.25rem;
+    border: 0.0761rem solid var(--color-grey-2);
+    background: var(--color-grey-2);
+
+    &:focus {
+        color: var(--color-grey-0);
+        border: 0.0761rem solid var(--color-grey-0);
+        background: var(--color-grey-2);
+    }
+}
+
+.label {
+    color: var(--color-grey-0);
+    font-size: 0.7614rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0rem;
+}

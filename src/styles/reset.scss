@@ -1,15 +1,11 @@
 * {
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
-    border: none;
-    background: transparent;
-
+    padding: 0;
 }
 
-ul,
-ol {
-    list-style: none;
+img {
+    max-width: 100%;
 }
 
 button {
@@ -18,8 +14,16 @@ button {
     border: none;
 }
 
+input {
+    background: transparent;
+    border: none;
+}
 
+ul,
+ol {
+    list-style: none;
+}
 
-img {
-    max-width: 100%;
+a {
+    text-decoration: underline;
 }
